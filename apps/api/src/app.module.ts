@@ -6,6 +6,7 @@ import { BookingsModule } from './bookings/bookings.module';
 import { EquipmentModule } from './equipment/equipment.module';
 import { MaintenanceModule } from './maintenance/maintenance.module';
 import { RepairTicketsModule } from './repair-tickets/repair-tickets.module';
+import { AuditLogsModule } from './audit-logs/audit-logs.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { RepairTicketsModule } from './repair-tickets/repair-tickets.module';
     EquipmentModule,
     MaintenanceModule,
     RepairTicketsModule,
+    AuditLogsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
