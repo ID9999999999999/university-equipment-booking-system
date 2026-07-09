@@ -1,6 +1,7 @@
 import {
   BadRequestException,
   ConflictException,
+  ForbiddenException,
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
@@ -185,6 +186,12 @@ export class BookingsService {
       throw new NotFoundException('Active actor not found.');
     }
 
+    if (actor.role !== 'ADMIN' && actor.role !== 'LAB_MANAGER') {
+      throw new ForbiddenException(
+        'Only ADMIN or LAB_MANAGER can approve bookings.',
+      );
+    }
+
     const approvedBooking = await this.prisma.booking.update({
       where: { id: input.bookingId },
       data: {
@@ -241,6 +248,12 @@ export class BookingsService {
 
     if (!actor || !actor.isActive) {
       throw new NotFoundException('Active actor not found.');
+    }
+
+    if (actor.role !== 'ADMIN' && actor.role !== 'LAB_MANAGER') {
+      throw new ForbiddenException(
+        'Only ADMIN or LAB_MANAGER can reject bookings.',
+      );
     }
 
     const rejectedBooking = await this.prisma.booking.update({
