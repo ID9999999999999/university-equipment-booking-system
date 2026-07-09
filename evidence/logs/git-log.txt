@@ -1,0 +1,10 @@
+* f958622 (HEAD -> master) Add backend evidence summary
+* 1f91a50 Update project README
+* 9c8af79 Add audit log endpoints
+* 954a668 Add repair ticket endpoints
+* 84fe13e Add maintenance booking block tests
+* 2840f11 Add maintenance endpoints
+* c5b6b4c Add equipment endpoint tests
+* 8e53c51 Add equipment endpoints
+* f6fcea7 Add role checks for booking approval flow
+* 02ce136 Initial backend core with booking and approval flow
