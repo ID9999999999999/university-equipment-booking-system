@@ -1,4 +1,7 @@
-* f63c20b (HEAD -> master) Add screenshots evidence
+* 05e74fb (HEAD -> master) Polish README for GitHub preparation
+* dd56e2f Add backend environment example
+* 6bf31cc Update evidence git log after screenshots
+* f63c20b Add screenshots evidence
 * fccbb52 Update final evidence git log
 * af7d59c Add audit logs test evidence
 * 5c81254 Add repair tickets test evidence
@@ -18,3 +21,4 @@
 * c5b6b4c Add equipment endpoint tests
 * 8e53c51 Add equipment endpoints
 * f6fcea7 Add role checks for booking approval flow
+* 02ce136 Initial backend core with booking and approval flow
