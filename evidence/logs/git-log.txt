@@ -1,4 +1,6 @@
-* af7d59c (HEAD -> master) Add audit logs test evidence
+* f63c20b (HEAD -> master) Add screenshots evidence
+* fccbb52 Update final evidence git log
+* af7d59c Add audit logs test evidence
 * 5c81254 Add repair tickets test evidence
 * 2ae6ea3 Add maintenance booking block test evidence
 * 85177c5 Add maintenance endpoints test evidence
@@ -13,3 +15,6 @@
 * 954a668 Add repair ticket endpoints
 * 84fe13e Add maintenance booking block tests
 * 2840f11 Add maintenance endpoints
+* c5b6b4c Add equipment endpoint tests
+* 8e53c51 Add equipment endpoints
+* f6fcea7 Add role checks for booking approval flow
