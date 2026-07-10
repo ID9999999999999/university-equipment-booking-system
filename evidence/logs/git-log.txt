@@ -1,4 +1,5 @@
-* 05e74fb (HEAD -> master) Polish README for GitHub preparation
+* 36d2525 (HEAD -> main, origin/main) Update evidence git log after README polish
+* 05e74fb Polish README for GitHub preparation
 * dd56e2f Add backend environment example
 * 6bf31cc Update evidence git log after screenshots
 * f63c20b Add screenshots evidence
