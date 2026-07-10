@@ -16,7 +16,7 @@ This rule is enforced by the backend booking kernel and verified through automat
 
 ## Project Status
 
-Current status: **Backend core completed and tested**
+Current status: **Backend core completed, tested, and documented with evidence**
 
 Implemented backend modules:
 
@@ -30,6 +30,8 @@ Implemented backend modules:
 - Repair tickets
 - Audit logs
 - Automated backend test scripts
+- Backend evidence logs
+- Screenshots evidence
 - Git commit history
 
 Frontend Flutter application will be implemented later.
@@ -79,6 +81,50 @@ Backend path:
 
 ```txt
 C:\Users\YASSER\Desktop\university-equipment-booking-system\apps\api
+```
+
+---
+
+## Environment File
+
+The backend uses a local environment file:
+
+```txt
+apps/api/.env
+```
+
+The real `.env` file is not committed to Git because it may contain local database credentials.
+
+A safe example file is provided:
+
+```txt
+apps/api/.env.example
+```
+
+To configure the backend on a new machine, copy:
+
+```txt
+apps/api/.env.example
+```
+
+to:
+
+```txt
+apps/api/.env
+```
+
+Then edit the `DATABASE_URL` value according to the local PostgreSQL username, password, database name, and port.
+
+Example:
+
+```env
+DATABASE_URL="postgresql://postgres:YOUR_PASSWORD_HERE@localhost:5432/university_equipment_booking?schema=public"
+```
+
+Important:
+
+```txt
+Do not commit the real .env file.
 ```
 
 ---
@@ -524,6 +570,61 @@ test-audit-logs.js                    PASSED
 
 ---
 
+## Evidence Package
+
+Evidence files are stored in:
+
+```txt
+evidence/
+```
+
+The evidence package contains:
+
+```txt
+evidence/tests/backend-test-summary.md
+evidence/logs/
+evidence/screenshots/
+```
+
+### Evidence Logs
+
+The `evidence/logs` folder contains saved command outputs for:
+
+```txt
+backend-build-log.txt
+git-log.txt
+test-booking-kernel-log.txt
+test-approval-flow-log.txt
+test-equipment-endpoints-log.txt
+test-maintenance-endpoints-log.txt
+test-maintenance-booking-block-log.txt
+test-repair-tickets-log.txt
+test-audit-logs-log.txt
+```
+
+### Screenshots Evidence
+
+The `evidence/screenshots` folder contains visual proof for:
+
+```txt
+postgres-running.png
+backend-running.png
+api-root.png
+db-health.png
+equipment-list.png
+booking-kernel-test.png
+approval-flow-test.png
+maintenance-booking-block-test.png
+repair-tickets-test.png
+audit-logs-test.png
+evidence-logs-folder.png
+readme-preview.png
+```
+
+These files prove that PostgreSQL runs locally, the NestJS backend starts correctly, the API responds, the database connection works, the equipment endpoint is accessible, and the core backend tests have recorded evidence.
+
+---
+
 ## Git Commit History
 
 Important commits include:
@@ -535,6 +636,18 @@ f6fcea7 Add role checks for booking approval flow
 2840f11 Add maintenance endpoints
 954a668 Add repair ticket endpoints
 9c8af79 Add audit log endpoints
+1f91a50 Update project README
+f958622 Add backend evidence summary
+f4b5ce0 Add booking kernel test evidence
+fa40c5b Add approval flow test evidence
+cd3ee82 Add equipment endpoints test evidence
+85177c5 Add maintenance endpoints test evidence
+2ae6ea3 Add maintenance booking block test evidence
+5c81254 Add repair tickets test evidence
+af7d59c Add audit logs test evidence
+f63c20b Add screenshots evidence
+6bf31cc Update evidence git log after screenshots
+dd56e2f Add backend environment example
 ```
 
 ---
@@ -601,13 +714,14 @@ Current limitations:
 Recommended next steps:
 
 ```txt
-1. Add Flutter UI.
-2. Add simple demo authentication or user selector.
-3. Add dashboard screens.
-4. Add screenshots and evidence folder.
-5. Improve README with screenshots.
-6. Push clean final version to GitHub.
-7. Prepare final project defense notes.
+1. Complete final GitHub preparation.
+2. Push the clean repository to GitHub.
+3. Verify that `.env` is not visible on GitHub.
+4. Verify that README and evidence folders render correctly on GitHub.
+5. Add Flutter UI.
+6. Add simple demo authentication or user selector.
+7. Add dashboard screens.
+8. Prepare final project defense notes.
 ```
 
 ---
